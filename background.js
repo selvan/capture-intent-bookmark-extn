@@ -17,17 +17,5 @@ function checkForSearchURL(tabId, changeInfo, tab) {
 // Listen for any changes to the URL of any tab.
 chrome.tabs.onUpdated.addListener(checkForSearchURL);
 
-//user click on icon
-chrome.browserAction.onClicked.addListener(function() {
-    chrome.windows.getCurrent(function(win) {
-        chrome.tabs.getSelected(win.id, actionClicked);
-    });
-});
-
-
-function actionClicked(tab) {
-    console.log(tab.url);
-}
-
 
 

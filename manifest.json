@@ -4,10 +4,11 @@
     "manifest_version": 2,
     "description": "This extention will push search intention & url to the indexer ",
     "browser_action": {
-        "default_icon": "icon.png"
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
     },
     "background": {
-        "scripts": ["sync.js"]
+        "page": "background.html"
     },
     "permissions": [
         "tabs"

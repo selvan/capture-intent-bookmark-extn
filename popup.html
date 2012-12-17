@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        min-width:357px;
+        overflow-x:hidden;
+      }
+
+      img {
+        margin:5px;
+        border:2px solid black;
+        vertical-align:middle;
+        width:75px;
+        height:75px;
+      }
+    </style>
+
+    <!-- JavaScript and HTML must be in separate files for security. -->
+      <script src="jquery-1.8.0.js"></script>
+      <script src="popup.js"></script>
+  </head>
+  <body>
+  <div>
+      <div>
+        <div class="caption">Intent :</div>
+          <div><input type="text" name="user_intent" id="intent"/></div>
+      </div>
+      <div>
+          <div class="caption">Content URL :</div>
+          <div><input type="text" name="url" id="url"/></div>
+      </div>
+      <div><input type="button" value="Submit" id="submit"></div>
+  </div>
+  </body>
+</html>
