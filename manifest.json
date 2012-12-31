@@ -2,15 +2,21 @@
     "name": "hyper-search-extension",
     "version": "1.0",
     "manifest_version": 2,
-    "description": "This extention will push search intention & url to the indexer ",
+    "description": "This extention will append search intention to title of the webpage",
     "browser_action": {
-        "default_icon": "icon.png",
-        "default_popup": "popup.html"
+        "default_icon": "icon_19x19.png",
+        "default_title" : "Intent capture"
     },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],  
+      "js": ["content.js"]
+    }
+  ],    
     "background": {
-        "page": "background.html"
+         "scripts": ["background.js"]
     },
     "permissions": [
-        "tabs"
+        "tabs", "http://*/*", "https://*/*"
     ]
 }

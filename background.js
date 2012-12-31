@@ -10,12 +10,17 @@ function checkForSearchURL(tabId, changeInfo, tab) {
             new RegExp("([^?=&]+)(=([^&]*))?", "g"),
             function($0, $1, $2, $3) { queryString[$1] = $3; }
         );
-        search_term = queryString["q"];
+        search_term = queryString["q"];       
     }
 };
 
+
+chrome.extension.onMessage.addListener(
+  function(request, sender, sendResponse) {
+  	if (request.send_intent === "yes" && search_term !== undefined) {
+  		sendResponse({intent: search_term});
+  	}
+});
+
 // Listen for any changes to the URL of any tab.
 chrome.tabs.onUpdated.addListener(checkForSearchURL);
-
-
-
