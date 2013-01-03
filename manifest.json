@@ -5,7 +5,8 @@
     "description": "This extention will append search intention to title of the webpage",
     "browser_action": {
         "default_icon": "icon_19x19.png",
-        "default_title" : "Intent capture"
+        "default_title" : "Intent capture",
+        "default_popup": "popup.html"
     },
   "content_scripts": [
     {
