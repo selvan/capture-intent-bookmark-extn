@@ -1,5 +1,5 @@
-Hyper Search Extension
-=======================
+Capture Intent - Bookmark Extension
+====================================
 
 Like many of us, I use bookmark feature of chrome browser, a lot. Over period of time my number of bookmarks have grown in more than thousand. I found it difficult to locate specific bookmarks that I marked them before and also organizing them is total pain. 
 
